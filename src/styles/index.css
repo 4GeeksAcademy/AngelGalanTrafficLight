@@ -1,12 +1,120 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #2c3e50;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
 
-/* 
+.traffic-signal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
 
-*/
+.pole {
+    width: 10px;
+    height: 150px;
+    background-color: #555;
+    margin-top: 10px;
+}
+
+
+.lights-container {
+    width: 100px;
+    background-color: #333;
+    border-radius: 10px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.lights-container.with-purple {
+    padding-bottom: 25px;
+}
+
+
+.light {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #444;
+    margin: 0 auto;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.light.red {
+    background-color: #800000;
+}
+
+.light.yellow {
+    background-color: #808000;
+}
+
+.light.green {
+    background-color: #006400;
+}
+
+.light.purple {
+    background-color: #4b0082;
+    display: none;
+}
+
+.lights-container.with-purple .light.purple {
+    display: block;
+}
+
+
+.light.active {
+    box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.8);
+}
+
+
+.light.red.active {
+    background-color: red;
+}
+
+.light.yellow.active {
+    background-color: yellow;
+}
+
+.light.green.active {
+    background-color: limegreen;
+}
+
+.light.purple.active {
+    background-color: purple;
+}
+
+
+.control-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button.btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: white;
+    background-color: #555;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #777;
+}
+
+button.btn:active {
+    background-color: #999;
+}
